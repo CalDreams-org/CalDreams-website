@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - CalDreams</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <a href="index.html">CalDreams</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="get-involved.html" class="active">Get Involved</a></li>
+                </ul>
+                <div class="nav-cta">
+                    <a href="get-involved.html#donate" class="btn btn-primary">Donate</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Get Involved</h1>
+            <p>Join us in creating pathways to success for California's students</p>
+        </div>
+    </section>
+
+    <!-- Ways to Get Involved -->
+    <section class="involvement-options">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ways to Make an Impact</h2>
+                <p>Choose how you'd like to support our mission</p>
+            </div>
+            <div class="involvement-grid">
+                <div class="involvement-card">
+                    <div class="involvement-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Donate</h3>
+                    <p>Your financial support directly impacts students and families in need.</p>
+                    <a href="#donate" class="btn btn-primary">Donate Now</a>
+                </div>
+                <div class="involvement-card">
+                    <div class="involvement-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Share your time and skills to mentor and support students.</p>
+                    <a href="#volunteer" class="btn btn-primary">Become a Volunteer</a>
+                </div>
+                <div class="involvement-card">
+                    <div class="involvement-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Partner</h3>
+                    <p>Collaborate with us as a corporate or community partner.</p>
+                    <a href="#partner" class="btn btn-primary">Partner With Us</a>
+                </div>
+                <div class="involvement-card">
+                    <div class="involvement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Apply for Programs</h3>
+                    <p>Are you a student or family seeking support? Apply today.</p>
+                    <a href="#apply" class="btn btn-primary">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donate Section -->
+    <section class="donate-section" id="donate">
+        <div class="container">
+            <div class="section-header">
+                <h2>Make a Donation</h2>
+                <p>Your contribution changes lives</p>
+            </div>
+            <div class="donate-content">
+                <div class="donate-impact">
+                    <h3>Your Impact</h3>
+                    <div class="impact-items">
+                        <div class="impact-item">
+                            <div class="impact-amount">$50</div>
+                            <p>Provides school supplies for one student</p>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-amount">$100</div>
+                            <p>Funds one month of tutoring sessions</p>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-amount">$500</div>
+                            <p>Supports college application fees and materials</p>
+                        </div>
+                        <div class="impact-item">
+                            <div class="impact-amount">$1,000</div>
+                            <p>Provides a semester scholarship</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="donate-form-container">
+                    <form class="donate-form">
+                        <h3>Choose Your Gift</h3>
+                        <div class="amount-buttons">
+                            <button type="button" class="amount-btn" data-amount="50">$50</button>
+                            <button type="button" class="amount-btn" data-amount="100">$100</button>
+                            <button type="button" class="amount-btn" data-amount="250">$250</button>
+                            <button type="button" class="amount-btn" data-amount="500">$500</button>
+                            <button type="button" class="amount-btn" data-amount="1000">$1,000</button>
+                            <button type="button" class="amount-btn" data-amount="custom">Other</button>
+                        </div>
+                        <div class="form-group">
+                            <label for="custom-amount">Custom Amount</label>
+                            <input type="number" id="custom-amount" placeholder="Enter amount" min="1">
+                        </div>
+                        <div class="donation-type">
+                            <label>
+                                <input type="radio" name="donation-type" value="one-time" checked>
+                                <span>One-time donation</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="donation-type" value="monthly">
+                                <span>Monthly donation</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="donor-name">Full Name *</label>
+                            <input type="text" id="donor-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="donor-email">Email *</label>
+                            <input type="email" id="donor-email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Complete Donation</button>
+                        <p class="tax-info">CalDreams is a 501(c)(3) nonprofit. Your donation is tax-deductible.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Section -->
+    <section class="volunteer-section" id="volunteer">
+        <div class="container">
+            <div class="section-header">
+                <h2>Volunteer Opportunities</h2>
+                <p>Share your time and talents to support students</p>
+            </div>
+            <div class="volunteer-opportunities">
+                <div class="opportunity-card">
+                    <h3><i class="fas fa-user-graduate"></i> Mentors</h3>
+                    <p>Provide one-on-one guidance and support to students throughout their educational journey.</p>
+                    <ul>
+                        <li>Commit 2-4 hours per month</li>
+                        <li>Background check required</li>
+                        <li>Training provided</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Apply to Mentor</a>
+                </div>
+                <div class="opportunity-card">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Tutors</h3>
+                    <p>Help students succeed academically by providing tutoring in various subjects.</p>
+                    <ul>
+                        <li>Flexible scheduling</li>
+                        <li>Virtual or in-person options</li>
+                        <li>Subject expertise preferred</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Become a Tutor</a>
+                </div>
+                <div class="opportunity-card">
+                    <h3><i class="fas fa-clipboard-check"></i> Event Volunteers</h3>
+                    <p>Support our events, workshops, and community programs throughout the year.</p>
+                    <ul>
+                        <li>Flexible commitment</li>
+                        <li>Various opportunities</li>
+                        <li>Great for groups</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Sign Up</a>
+                </div>
+                <div class="opportunity-card">
+                    <h3><i class="fas fa-briefcase"></i> Career Coaches</h3>
+                    <p>Share your professional expertise to help students prepare for careers.</p>
+                    <ul>
+                        <li>Professional experience required</li>
+                        <li>Resume reviews and mock interviews</li>
+                        <li>Networking opportunities</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partner Section -->
+    <section class="partner-section" id="partner">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partnership Opportunities</h2>
+                <p>Collaborate with us to create lasting impact</p>
+            </div>
+            <div class="partnership-types">
+                <div class="partnership-card">
+                    <div class="partnership-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Partners</h3>
+                    <p>Align your company's values with our mission through:</p>
+                    <ul>
+                        <li>Sponsorship opportunities</li>
+                        <li>Employee volunteer programs</li>
+                        <li>Internship and job shadowing programs</li>
+                        <li>Matching gift programs</li>
+                        <li>In-kind donations</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="partnership-card">
+                    <div class="partnership-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Schools & Districts</h3>
+                    <p>Bring our programs to your students:</p>
+                    <ul>
+                        <li>On-site program implementation</li>
+                        <li>Professional development for staff</li>
+                        <li>Student support services</li>
+                        <li>Family engagement programs</li>
+                        <li>College readiness initiatives</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Partner With Us</a>
+                </div>
+                <div class="partnership-card">
+                    <div class="partnership-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Community Organizations</h3>
+                    <p>Strengthen our collective impact through:</p>
+                    <ul>
+                        <li>Collaborative programming</li>
+                        <li>Resource sharing</li>
+                        <li>Referral networks</li>
+                        <li>Joint fundraising initiatives</li>
+                        <li>Community events</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Connect With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apply Section -->
+    <section class="apply-section" id="apply">
+        <div class="container">
+            <div class="section-header">
+                <h2>Apply for Programs</h2>
+                <p>Take the first step toward educational success</p>
+            </div>
+            <div class="apply-content">
+                <div class="apply-info">
+                    <h3>Who Can Apply?</h3>
+                    <p>CalDreams programs are open to students and families throughout California. We prioritize:</p>
+                    <ul class="apply-list">
+                        <li><i class="fas fa-check"></i> First-generation college students</li>
+                        <li><i class="fas fa-check"></i> Low-income families</li>
+                        <li><i class="fas fa-check"></i> Underrepresented communities</li>
+                        <li><i class="fas fa-check"></i> Students demonstrating academic potential</li>
+                    </ul>
+
+                    <h3>Application Process</h3>
+                    <ol class="process-steps">
+                        <li>Complete the online application</li>
+                        <li>Submit required documentation</li>
+                        <li>Attend an information session (optional)</li>
+                        <li>Receive notification within 2-4 weeks</li>
+                    </ol>
+
+                    <h3>Important Dates</h3>
+                    <div class="dates-info">
+                        <p><strong>Early Start:</strong> Rolling enrollment</p>
+                        <p><strong>K-12 Success:</strong> Applications due August 1</p>
+                        <p><strong>College Pathways:</strong> Applications due November 1</p>
+                        <p><strong>Career Launch:</strong> Rolling enrollment</p>
+                    </div>
+                </div>
+                <div class="apply-form-container">
+                    <form class="apply-form">
+                        <h3>Start Your Application</h3>
+                        <div class="form-group">
+                            <label for="apply-program">Select Program *</label>
+                            <select id="apply-program" required>
+                                <option value="">Choose a program</option>
+                                <option value="early-start">Early Start</option>
+                                <option value="k12-success">K-12 Success</option>
+                                <option value="college-pathways">College Pathways</option>
+                                <option value="career-launch">Career Launch</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="student-name">Student Name *</label>
+                            <input type="text" id="student-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="parent-name">Parent/Guardian Name *</label>
+                            <input type="text" id="parent-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apply-email">Email *</label>
+                            <input type="email" id="apply-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apply-phone">Phone Number *</label>
+                            <input type="tel" id="apply-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="grade-level">Current Grade Level *</label>
+                            <select id="grade-level" required>
+                                <option value="">Select grade</option>
+                                <option value="preschool">Preschool</option>
+                                <option value="k">Kindergarten</option>
+                                <option value="1-5">Grades 1-5</option>
+                                <option value="6-8">Grades 6-8</option>
+                                <option value="9-12">Grades 9-12</option>
+                                <option value="college">College</option>
+                                <option value="graduate">Graduate</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell us about your educational goals</label>
+                            <textarea id="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Submit Application</button>
+                        <p class="form-note">Questions? Email us at admissions@caldreams.org</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Stay Connected</h2>
+                    <p>Subscribe to our newsletter for updates, success stories, and upcoming events.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CalDreams</h3>
+                    <p>Empowering California's youth from cradle to career through education, support, and opportunity.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Programs</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="get-involved.html">Get Involved</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="resources.html#students">For Students</a></li>
+                        <li><a href="resources.html#families">For Families</a></li>
+                        <li><a href="resources.html#educators">For Educators</a></li>
+                        <li><a href="resources.html#partners">For Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Education Way, California, CA 94000</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@caldreams.org</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CalDreams. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
