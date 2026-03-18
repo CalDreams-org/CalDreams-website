@@ -1,0 +1,29 @@
+backend:
+  name: github
+  repo: CalDreams-org/CalDreams-website
+  branch: main
+
+media_folder: "assets/img" # Folder where uploaded images will be saved
+public_folder: "/assets/img" # The public path to the above folder
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Home Page"
+        name: "index"
+        fields:
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string" }
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Lead", name: "hero_lead", widget: "text" }
+          - { label: "Hero Stats", name: "hero_stats", widget: "list", fields: [
+              { label: "Value", name: "value", widget: "string" },
+              { label: "Label", name: "label", widget: "string" }
+            ]}
+      - file: "about.html"
+        label: "About Page"
+        name: "about"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "body", widget: "markdown" }
