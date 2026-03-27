@@ -10,10 +10,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header">
     <div class="container">
       <nav class="nav" data-site-nav>
@@ -143,10 +145,10 @@
             CalDreams, Inc. is a registered 501(c)(3) nonprofit organization founded by educators.
           </p>
           <div class="footer-socials">
-            <a href="https://www.facebook.com/caldreams.inc" aria-label="Follow on Facebook">f</a>
-            <a href="https://www.instagram.com/caldreams_edu/" aria-label="Follow on Instagram">⌾</a>
-            <a href="https://www.tiktok.com/@caldreams_edu" aria-label="Follow on TikTok">TT</a>
-            <a href="https://www.youtube.com/@CalDreams_Education" aria-label="Follow on YouTube">▶</a>
+            <a href="https://www.facebook.com/caldreams.inc" aria-label="Follow on Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/caldreams_edu/" aria-label="Follow on Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@caldreams_edu" aria-label="Follow on TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@CalDreams_Education" aria-label="Follow on YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <div>
@@ -170,10 +172,7 @@
         <div>
           <h4>Contact</h4>
           <ul>
-            <!-- <li>300 Lakeside Dr, Suite 600</li>
-              <li>Oakland, CA 94612</li>
-              <li><a href="tel:15105551234">(510) 555-1234</a></li>
-              <li><a href="mailto:info@caldreams.org">info@caldreams.org</a></li> -->
+            <li class="site-footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@caldreams.org">info@caldreams.org</a></li>
           </ul>
         </div>
       </div>
@@ -184,6 +183,7 @@
     </div>
   </footer>
 
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
   <script src="assets/js/main.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();

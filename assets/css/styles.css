@@ -98,9 +98,32 @@ button {
   color: var(--color-muted);
 }
 
+.nav__links a {
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.nav__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  right: 50%;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  transition: left 0.25s ease, right 0.25s ease;
+}
+
 .nav__links a:hover,
 .nav__links a.active {
   color: var(--color-primary);
+}
+
+.nav__links a:hover::after,
+.nav__links a.active::after {
+  left: 0;
+  right: 0;
 }
 
 .nav__cta {
@@ -179,6 +202,7 @@ button {
 
 .hero__content {
   position: relative;
+  z-index: 1; /* sit above the ::after gradient overlay */
   display: grid;
   gap: 2.5rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -417,11 +441,31 @@ section {
 
 .partners {
   display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   align-items: center;
   justify-items: center;
-  opacity: 0.85;
+}
+
+.partners span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  background: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  text-align: center;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.partners span:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
 }
 
 /* CTA section */
@@ -652,4 +696,121 @@ section {
   .site-footer__grid {
     gap: 1.75rem;
   }
+}
+
+/* =============================================
+   Design Enhancements
+   ============================================= */
+
+/* Scroll-reveal: elements animate in when visible */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stagger cards and stat items inside revealed sections */
+[data-reveal] .card:nth-child(2),
+[data-reveal] .stats-grid__item:nth-child(2) { transition-delay: 0.1s; }
+[data-reveal] .card:nth-child(3),
+[data-reveal] .stats-grid__item:nth-child(3) { transition-delay: 0.2s; }
+[data-reveal] .card:nth-child(4),
+[data-reveal] .stats-grid__item:nth-child(4) { transition-delay: 0.3s; }
+
+/* White-background section variant */
+.section--white {
+  background: var(--color-white);
+}
+
+/* Scroll-progress bar at very top */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  z-index: 1100;
+  transition: width 0.08s linear;
+}
+
+/* Back-to-top floating button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  box-shadow: var(--shadow-hover);
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  z-index: 900;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+
+.back-to-top:hover {
+  background: var(--color-secondary);
+}
+
+/* Footer social icons (Font Awesome) */
+.footer-socials a i {
+  font-size: 0.95rem;
+}
+
+/* Footer contact links */
+.site-footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Smooth page entrance */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.page-hero h1,
+.hero__title {
+  animation: fadeUp 0.7s ease both;
+}
+
+.page-hero .breadcrumb,
+.hero__eyebrow {
+  animation: fadeUp 0.5s ease both;
+}
+
+.page-hero .lead,
+.hero__lead {
+  animation: fadeUp 0.7s 0.15s ease both;
+}
+
+.hero .nav__cta {
+  animation: fadeUp 0.7s 0.3s ease both;
+}
+
+.hero__stats {
+  animation: fadeUp 0.7s 0.2s ease both;
 }

@@ -10,10 +10,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Source+Sans+Pro:wght@400;600&display=swap"
     rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <header class="site-header">
     <div class="container">
       <nav class="nav" data-site-nav>
@@ -83,7 +85,7 @@
       </div>
     </section>
 
-    <section>
+    <section class="section--white">
       <div class="container">
         <div class="section-heading">
           <span class="tag">Our Integrated Model</span>
@@ -94,7 +96,7 @@
             workforce.
           </p>
         </div>
-        <div class="grid grid--three">
+        <div class="grid grid--three" data-reveal>
           <article class="card">
             <div class="card__icon">📚</div>
             <h3 class="card__title">Academic Support Labs</h3>
@@ -127,7 +129,7 @@
     </section>
 
     <section>
-      <div class="container feature">
+      <div class="container feature" data-reveal>
         <div class="feature__content">
           <span class="tag">Community Powered</span>
           <h3>An equity-driven bridge to higher education</h3>
@@ -172,8 +174,8 @@
       </div>
     </section>
 
-    <section>
-      <div class="container grid grid--two">
+    <section class="section--white">
+      <div class="container grid grid--two" data-reveal>
         <article class="testimonials">
           <div class="tag">Student Story</div>
           <p class="testimonials__quote">
@@ -204,7 +206,7 @@
             high-impact learning experiences for students across East Bay.
           </p>
         </div>
-        <div class="partners">
+        <div class="partners" data-reveal>
           <span>East Bay Unified</span>
           <span>Peralta Colleges</span>
           <span>UC Berkeley</span>
@@ -251,10 +253,10 @@
             CalDreams, Inc. is a registered 501(c)(3) nonprofit organization founded by educators.
           </p>
           <div class="footer-socials">
-            <a href="https://www.facebook.com/caldreams.inc" aria-label="Follow on Facebook">f</a>
-            <a href="https://www.instagram.com/caldreams_edu/" aria-label="Follow on Instagram">⌾</a>
-            <a href="https://www.tiktok.com/@caldreams_edu" aria-label="Follow on TikTok">TT</a>
-            <a href="https://www.youtube.com/@CalDreams_Education" aria-label="Follow on YouTube">▶</a>
+            <a href="https://www.facebook.com/caldreams.inc" aria-label="Follow on Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/caldreams_edu/" aria-label="Follow on Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@caldreams_edu" aria-label="Follow on TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.youtube.com/@CalDreams_Education" aria-label="Follow on YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
         <div>
@@ -278,10 +280,7 @@
         <div>
           <h4>Contact</h4>
           <ul>
-            <!-- <li>300 Lakeside Dr, Suite 600</li>
-              <li>Oakland, CA 94612</li>
-              <li><a href="tel:15105551234">(510) 555-1234</a></li>
-              <li><a href="mailto:info@caldreams.org">info@caldreams.org</a></li> -->
+            <li class="site-footer__contact-item"><i class="fas fa-envelope"></i><a href="mailto:info@caldreams.org">info@caldreams.org</a></li>
           </ul>
         </div>
       </div>
@@ -292,6 +291,7 @@
     </div>
   </footer>
 
+  <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
   <script src="assets/js/main.js"></script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
